@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:pilulas_matrix/Constantes/const.dart';
 import 'package:pilulas_matrix/pages/pilula_azul.dart';
 import 'package:pilulas_matrix/pages/pilula_vermelha.dart';
 import 'package:pilulas_matrix/pages/pilulas.dart';
@@ -13,11 +14,11 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      initialRoute: 'pilulas',
+      initialRoute: Constantes.rotaPilulas,
       routes: { 
-        'pilulas' : (context) => Pilulas(),
-        'pilulaAzul':(context) =>PilulaAzul(),
-        'pilulaVermelha':(context) =>PilulaVermelha(),
+        Constantes.rotaPilulas : (context) => Pilulas(),
+        Constantes.rotaPilulaAzul:(context) =>PilulaAzul(),
+        Constantes.rotaPilulaVermelha:(context) =>PilulaVermelha(),
       }
     );
   }

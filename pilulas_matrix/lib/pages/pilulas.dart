@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:pilulas_matrix/Constantes/const.dart';
 
 class Pilulas extends StatelessWidget {
   @override
@@ -9,7 +10,7 @@ class Pilulas extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Text(
-            "Qual a pílula que você vai escolher?", style: TextStyle(fontSize: 24), textAlign: TextAlign.center, 
+            Constantes.tituloMsg, style: TextStyle(fontSize: 24), textAlign: TextAlign.center,
           ),
           SizedBox(height: 25),
           Row(
@@ -17,23 +18,23 @@ class Pilulas extends StatelessWidget {
             children:[
               RaisedButton(
                 onPressed: (){
-                  Navigator.pushNamed(context, 'pilulaVermelha');
+                  Navigator.pushNamed(context, Constantes.rotaPilulaVermelha);
 
                 },
                 color: Colors.red,
                 child: Text(
-                  "Vermelha", style: TextStyle(color: Colors.white)
+                  Constantes.btnPilulaVermelha, style: TextStyle(color: Colors.white)
                 ),
               ),
               SizedBox(width: 25),
               RaisedButton(
                 onPressed: (){
-                  Navigator.pushNamed(context, 'pilulaAzul');
+                  Navigator.pushNamed(context, Constantes.rotaPilulaAzul);
 
                 },
                 color: Colors.blue,
                 child: Text(
-                  "Azul", style: TextStyle(color: Colors.white)
+                  Constantes.btnPilulaAzul, style: TextStyle(color: Colors.white)
                 ),
               )
             ]
